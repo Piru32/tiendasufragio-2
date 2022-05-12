@@ -172,7 +172,24 @@ productos.forEach(function(producto){
 
     let tarjeta = document.createElement("div")
     tarjeta.classList.add("card")
+
+    let nombreProducto = document.createElement("h4")
+    nombreProducto.classList.add("text-center")
+    nombreProducto.textContent = producto.nombre
+
+    let precioProducto = document.createElement("p")
+    precioProducto.classList.add("card-text", "text-success")
+    precioProducto.textContent = "$" + producto.precio
+
+    let estadoProducto = document.createElement("p")
+    estadoProducto.classList.add("card-text", "text-success")
+    estadoProducto.textContent = producto.estado
+
     tarjeta.appendChild(foto)
+    tarjeta.appendChild(nombreProducto)
+    tarjeta.appendChild(precioProducto)
+    tarjeta.appendChild(estadoProducto)
+
     columna.appendChild(tarjeta)
     contenedor.appendChild(columna)
 
